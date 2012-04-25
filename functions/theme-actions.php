@@ -164,7 +164,7 @@ add_action('themnific_head','themnific_mobile_styling');
 	// Add stylesheet for shortcodes to HEAD
 	function themnific_mobile_styling() {
 		echo "<!-- Themnific Mobile CSS -->\n";
-		echo '<link href="'. get_template_directory_uri() . '/styles/mobile.css" rel="stylesheet" type="text/css" />'."\n\n";
+		//echo '<link href="'. get_template_directory_uri() . '/styles/mobile.css" rel="stylesheet" type="text/css" />'."\n\n";
 
 } 
 ?>

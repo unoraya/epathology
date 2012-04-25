@@ -143,7 +143,7 @@ $options[] = array( "name" => " Primary Styling - Body",
 $options[] = array( "name" => "General Text Font Style",
 					"desc" => "Select the typography used in general text. <br />* semi-safe font <br />** @font-face rule <br />*** Google Webfonts (Must be allowed in General Settings tab).",
 					"id" => $shortname."_font_text",
-					"std" => array('size' => '13','face' => 'Georgia, serif','style' => 'normal','color' => '#53648f'),
+					"std" => array('size' => '13','face' => 'Georgia, serif','style' => 'normal','color' => '#999999'),
 					"type" => "typography"); 
 
 					

@@ -1,4 +1,4 @@
-        <?php if (get_option('themnific_dis_social') <> "true") { ?>
+        <?php /*if (get_option('themnific_dis_social') <> "true") { ?>
     	<div id="social" class="body3">
             <div class="container">
                 <div class="row">     
@@ -6,44 +6,34 @@
                 </div>	
              </div>
         </div>
-        <?php } ?>
-        
-<div id="footer" class="body2">
-    <div class="container">    
+        <?php }*/ ?>
         
 
-        <?php if (get_option('themnific_dis_foowidgets') <> "true") { ?>
-            <?php get_template_part('/includes/uni-bottombox');?>
-        <?php } ?>
 
+<div class="container"> 
+        <hr style="border:#EDEDED solid 1px;">
 
+        <footer>
 
+            <div style="text-align: center;">
+                <img src="<?php bloginfo("template_url"); ?>/img/logo_angel.jpg" alt="Laboratorio angel">
+            </div><!-- logo angel -->
 
-        <div class="row">      
-          	<div id="copyright" class="sixcol">
-            <?php if(get_option('themnific_footer_left') == 'true'){
-                echo stripslashes(get_option('themnific_footer_left_text'));
-            } else { ?>
-				<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?></p>
-            <?php } ?>
-			</div>
-        
-        
-        	<div id="credit" class="sixcol last">
-            <?php if(get_option('themnific_footer_right') == 'true'){
-                echo stripslashes(get_option('themnific_footer_right_text'));
-            } else { ?>
-				<p><?php _e('Powered by','themnific');?>
-                	<a href="http://www.wordpress.org">Wordpress</a>. 
-					<?php _e('Designed by','themnific');?> <a href="http://themnific.com">Themnific</a></p>
-            <?php } ?>
-			</div>
+            <hr style="border-top:#36A9E1 solid 1px;">
 
-    	</div>
-        
-        	
-	</div><!-- end #footer container -->
-</div><!-- /#footer  -->
+            <div style="text-align: center;">
+                <?php if(get_option('themnific_footer_left') == 'true'){
+                    echo stripslashes(get_option('themnific_footer_left_text'));
+                }?>
+
+                <?php if(get_option('themnific_footer_right') == 'true'){
+                    echo stripslashes(get_option('themnific_footer_right_text'));
+                }?>
+                <img src="<?php bloginfo("template_url"); ?>/img/social.jpg" alt="Redes sociales laboratorio angel">
+            </div><!-- copy -->
+
+        </footer>
+</div>
 
 <?php wp_footer(); ?>
 <?php themnific_foot(); ?>

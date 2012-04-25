@@ -3,7 +3,7 @@ if ( function_exists('has_nav_menu') && has_nav_menu('primary-menu') ) {
 	wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_class' => 'nav fl', 'menu_id' => 'main-nav' , 'theme_location' => 'primary-menu' ) );
 } else {
 ?>
-    <ul id="main-nav" class="nav">
+    <ul id="main-nav" class="nav nav-pills">
         <?php 
         if ( get_option('themnific_custom_nav_menu') == 'true' ) {
             if ( function_exists('themnific_custom_navigation_output') )
