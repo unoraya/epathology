@@ -1,54 +1,42 @@
+
 <?php get_header(); ?>
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
+
 <div id="core" class="container">
-	<div class="row">
-    
-        <div class="eightcol">
+  <div class="row">
 
-		<div <?php post_class(); ?>>
-        		<h2 class="leading"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <div class="meta">
-                        <?php the_time('M j, y') ?> &bull; 
-                        <?php the_category(', ') ?> &bull; 
-                        <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?> &bull; 
-                        <a href="<?php the_permalink(); ?>"><?php _e('Read More','themnific');?> &#187;</a>
-                </div> 
-                <?php $video_input = get_post_meta($post->ID, 'dbt_video', true);?>
-				<?php  echo ($video_input); ?>	
-                
-                 <div class="entry">
-                 <?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:','themnific') . '</span>', 'after' => '</div>' ) ); ?>
-                    <?php the_tags( '<p>' . __( 'Tags: ','themnific') . '', ', ', '</p>'); ?>
-                 <?php comments_template(); ?>
-                </div>
-            </div>
+        <?php get_search_form(); ?>
+
+        <div class="span10">                   
+            <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+
+                        <h2 class="titulo"><?php the_title(); ?></h2>
+                        <div class="post">
+                            
+                             <div class="entry">
+                             <?php the_content(); ?>
+                                <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:','themnific') . '</span>', 'after' => '</div>' ) ); ?>
+                                <?php the_tags( '<p>' . __( 'Tags: ','themnific') . '', ', ', '</p>'); ?>
+                             <?php comments_template(); ?>
+                            </div>
+                        </div>
 
 
+                        <?php endwhile; ?><!-- end post -->
+            <?php else : ?>
+                <h1>Perdon no hay paginas encontradas.</h1>
+                        <?php get_search_form(); ?><br/>
+          <?php endif; ?>
 
-	<?php endwhile; else: ?>
+        </div><!-- end #core .span9-->
 
-		<p><?php _e('Sorry, no posts matched your criteria','themnific');?>.</p>
-
-	<?php endif; ?>
-
-                <div style="clear: both;"></div>
-
-        </div><!-- end #core .eightcol-->
-
-    
-    
-    
-        <div class="fourcol last">
-        
-        		<?php get_sidebar(); ?>
-        
+        <div class="span2">
+                <?php get_sidebar(); ?>
         </div>
-	</div><!--end #core .row-->
 
-    
-   <div style="clear: both;"></div>
+
+
+  </div><!--end #core .row-->
 </div><!--end #core-->
 
 

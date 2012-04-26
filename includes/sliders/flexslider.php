@@ -11,8 +11,7 @@
 				    	<div class="item active">
 						    <a href="<?php the_permalink(); ?>">
 						    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'folio-image'); ?>
-						    <!-- <img class="bags" src="<?php echo get_template_directory_uri(); ?>/js/timthumb.php?src=<?php echo $image[0]; ?>&amp;w=700&amp;h=350" alt="<?php the_title(); ?>"/></a> -->
-						    <img class="bags" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>"/></a>
+						    <img class="bags" src="<?php echo get_template_directory_uri(); ?>/js/timthumb.php?src=<?php echo $image[0]; ?>&amp;w=700&amp;h=350" alt="<?php the_title(); ?>"/></a>
 				    	</div>
 				    <?php }else{ ?>  
 				    	<div class="item">
