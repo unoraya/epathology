@@ -1,8 +1,8 @@
 <h2> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <div class="meta">
-			<?php the_time('M j, y') ?> &bull; 
-            <?php the_category(', ') ?> &bull; 
-            <?php comments_popup_link('Mingun comentario', '1 Comentario', '% Comentarios'); ?>
+			<?php echo "<span class='blue'>".strtoupper(get_the_time('M j, y'))."<span>"; ?> -
+            <?php the_category(', '); ?>  
+            <?php comments_popup_link('Ningun comentario', '1 Comentario', '% Comentarios'); ?>
     </div> 
     <a href="<?php the_permalink(); ?>">
     <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'folio-image'); ?>

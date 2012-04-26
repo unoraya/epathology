@@ -9,6 +9,7 @@ Template Name: Full Width
 <div id="core" class="container">
   <div class="row">
 
+        <?php get_search_form(); ?>
 
         <div class="fullneed">
             <?php if (get_option('themnific_slider_dis') <> "true") { ?>

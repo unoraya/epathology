@@ -12,7 +12,7 @@ if ( function_exists('has_nav_menu') && has_nav_menu('primary-menu') ) {
         } else { ?>
             
             <?php if ( is_page() ) $highlight = "page_item"; else $highlight = "page_item current_page_item"; ?>
-            <li class="<?php echo $highlight; ?>"><a id="homes" href="<?php echo home_url(); ?>"><?php _e('Home','themnific');?></a></li>
+            <li class="<?php echo $highlight; ?>"><a id="homes" href="<?php echo home_url(); ?>"><?php _e('HOME','themnific');?></a></li>
             <?php 
             if (get_option('themnific_cat_menu') == 'true' ) 
                 wp_list_categories('sort_column=menu_order&depth=6&title_li=&exclude='.get_option('themnific_nav_exclude')); 

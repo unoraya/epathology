@@ -2,25 +2,21 @@
 <div id="core" class="container">
 	<div class="row">
     
-        <div class="eightcol">
-              <h2>Search Results</h2>
+        <?php get_search_form(); ?>
+
+        <div class="span10">
+              <h2 class="titulo">Resultados de la busqueda</h2>
 		<?php if (have_posts()) : ?>
+
               <ul class="medpost">
-				<?php while (have_posts()) : the_post(); ?>
-                    
+				        <?php while (have_posts()) : the_post(); ?>
                            <li><?php get_template_part('/includes/post-types/medpost');?></li>
-                                    
                 <?php endwhile; ?><!-- end post -->
-                </ul><!-- end latest posts section-->
-               
-<div style="clear: both;"></div>
-
-
-
+              </ul><!-- end latest posts section-->
 
 			<ul class="navigation">
-			<li class="fl"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older Items' ) ); ?></li>
-			<li class="fr"><?php previous_posts_link( __( 'Newer Items <span class="meta-nav">&rarr;</span>' ) ); ?></li>
+			<li class="fl"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Items Viejos' ) ); ?></li>
+			<li class="fr"><?php previous_posts_link( __( 'Items viejos <span class="meta-nav">&rarr;</span>' ) ); ?></li>
 			</ul><!-- end navigation -->
 		<?php else : ?>
 
@@ -34,17 +30,9 @@
 		<?php endif; ?>
         </div><!-- end #core .eightcol-->
 
-    
-    
-    
-        <div class="fourcol last">
-        
+        <div class="span2">
         		<?php get_sidebar(); ?>
-        
         </div>
 	</div><!--end #core .row-->
-
-    
-   <div style="clear: both;"></div>
 </div><!--end #core-->
 <?php get_footer(); ?>

@@ -1,4 +1,19 @@
+/*  
+Theme Name: Respo Theme
+Description: Responsive WordPress theme
+Theme URI: http://themnific.com/
+Author: Dannci & Themnific
+Author URI: http://themnific.com/
+version: 1.0
+Tags:
+License: GNU/GPL Version 2 or later. 
+License URI: http://www.gnu.org/licenses/gpl.html 
+Copyright: (c) 2009 Dannci & Themnific.
+ 
+*/
 
+
+/* CSS Resets */
 
 
 
@@ -111,7 +126,9 @@
 		.fullneed .titulo{
 			font-size: 60px;
 		}
-
+		.blue{
+			color:#36A9E1;
+		}
 
 
 
@@ -302,6 +319,22 @@ display: none;
 	width: auto;
 	margin-top:30px;
 }
+
+/* @indexpost - types
+********************************************************************************************
+********************************************************************************************/
+
+ul.medpost li{ overflow:hidden;margin-bottom:40px}
+
+ul.medpost li h2{ padding:0 0 15px 0; margin:0 0 15px 0;
+	background: url(images/edge-shadows-small.png) bottom repeat-x}
+
+.meta{ padding:0; margin:0 0 15px 0; font-size:85%;}
+
+ul.medpost li img{max-width: 100%; display: block; margin:10px 40px 40px 2px;}
+
+
+.entry p{ margin:0 0 15px 0}
 
 
 

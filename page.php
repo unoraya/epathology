@@ -1,23 +1,16 @@
 
-
-
-
-
 <?php get_header(); ?>
 
 <div id="core" class="container">
   <div class="row">
 
+        <?php get_search_form(); ?>
 
-        <div class="span10">
-            <?php if (get_option('themnific_slider_dis') <> "true") { ?>
-                  <?php get_template_part('/includes/sliders/flexslider');?>
-            <?php } ?>
-                   
+        <div class="span10">                   
             <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
 
-                        <h2 class="titulo span5"><?php the_title(); ?></h2>
+                        <h2 class="titulo"><?php the_title(); ?></h2>
                         <div class="post">
                             
                              <div class="entry">
