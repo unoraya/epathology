@@ -9,7 +9,7 @@
   <div class="row">
 
 
-        <div class="span9">
+        <div class="span10">
             <?php if (get_option('themnific_slider_dis') <> "true") { ?>
                   <?php get_template_part('/includes/sliders/flexslider');?>
             <?php } ?>
@@ -17,7 +17,7 @@
             <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
 
-                        <h2 class="titulo span4"><?php the_title(); ?></h2>
+                        <h2 class="titulo span5"><?php the_title(); ?></h2>
                         <div class="post">
                             
                              <div class="entry">
@@ -37,7 +37,7 @@
 
         </div><!-- end #core .span9-->
 
-        <div class="span3">
+        <div class="span2">
                 <?php get_sidebar(); ?>
         </div>
 
